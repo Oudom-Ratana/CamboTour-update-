@@ -1,11 +1,439 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is homepage</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambodia - Kingdom of Wonder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      /* Animation សម្រាប់រូបភាព Background */
+      .hero-zoom {
+        animation: slowZoom 20s infinite alternate;
+      }
+
+      @keyframes slowZoom {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white overflow-x-hidden">
+    <section
+      class="relative h-screen min-h-[600px] flex items-center overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-blue-900">
+        <img
+          src="../image/4.jpg"
+          alt="AngkorWat"
+          class="w-full h-full object-cover opacity-60 hero-zoom"
+        />
+      </div>
+
+      <div class="relative container mx-auto px-4 z-10">
+        <div class="max-w-2xl text-white animate__animated animate__fadeInLeft">
+          <h1
+            class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4"
+          >
+            Discover the beauty<br />of
+            <span class="text-yellow-400">Cambodia</span>
+          </h1>
+          <p
+            class="text-xl md:text-2xl mb-8 opacity-90 animate__animated animate__fadeInLeft animate__delay-1s"
+          >
+            From ancient temples to stunning beaches, your adventure starts
+            here.
+          </p>
+          <div class="animate__animated animate__zoomIn animate__delay-2s">
+            <a
+              href="#"
+              class="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-10 py-4 rounded-full transition-all transform hover:scale-110 shadow-lg"
+            >
+              Start Your Journey
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="w-full lg:w-1/2 animate__animated animate__fadeInUp">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+              Explore the KINGDOM of Wonder
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              "Where every stone breathes history and every smile tells a story.
+              Find your zen in the heart of the Kingdom."
+            </p>
+
+            <ul class="space-y-4 mb-8">
+              <li
+                class="flex items-center gap-3 transition-transform hover:translate-x-2"
+              >
+                <span
+                  class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-white shadow-sm"
+                  >✓</span
+                >
+                <span class="text-gray-700 font-medium">Iconic Landmarks</span>
+              </li>
+              <li
+                class="flex items-center gap-3 transition-transform hover:translate-x-2"
+              >
+                <span
+                  class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-white shadow-sm"
+                  >✓</span
+                >
+                <span class="text-gray-700 font-medium">Natural Wonders</span>
+              </li>
+              <li class="flex items-center gap-3 transition-transform hover:translate-x-2">
+                <span
+                  class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm text-white font-bold"
+                >
+                  ✓
+                </span>
+                <span class="text-gray-700 font-medium">Local Cuisine</span>
+              </li>
+            </ul>
+
+            <a
+              href="#"
+              class="inline-block bg-gray-800 text-white px-8 py-3 rounded-full font-bold hover:bg-gray-700 transition shadow-md"
+            >
+              View Destinations
+            </a>
+          </div>
+
+          <div class="w-full lg:w-1/2 animate__animated animate__fadeInRight">
+            <div class="relative group">
+              <img
+                src="../image/explore.webp"
+                class="w-full h-auto rounded-3xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                alt="Cambodia"
+              />
+              <div
+                class="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-400/10 rounded-full -z-10 group-hover:scale-150 transition-transform duration-700"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h2
+          class="text-3xl md:text-5xl font-bold text-gray-800 mb-16 animate__animated animate__fadeIn"
+        >
+          Most Popular Destinations
+        </h2>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
+        >
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/angkorwat.webp"
+                alt="AngkorWat"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Angkor Wat
+              </h2>
+              <p class="text-gray-600 text-sm">
+                World's largest religious monument.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/allphoto-bangkok-snsPfG7tIcA-unsplash.jpg"
+                alt="Phnom Penh"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Phnom Penh
+              </h2>
+              <p class="text-gray-600 text-sm">
+                Vibrant blend of history and city life.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/kohrong.JPG"
+                alt="Koh Rong"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Koh Rong
+              </h2>
+              <p class="text-gray-600 text-sm">
+                Pristine white sands and clear waters.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/busra.JPG"
+                alt="Mondulkiri"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Mondulkiri
+              </h2>
+              <p class="text-gray-600 text-sm">
+                A sanctuary for nature lovers.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/tonlesab.JPG"
+                alt="Tonle Sap"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Tonle Sap
+              </h2>
+              <p class="text-gray-600 text-sm">
+                Famous floating and stilted villages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#F5F1E9]">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate__animated animate__fadeIn">
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+            Testimonials
+          </h2>
+          <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate__animated animate__fadeInUp"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-14 h-14 bg-yellow-500 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg animate__animated animate__pulse animate__infinite"
+              >
+                S
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">Satya P.</h4>
+                <div class="flex text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed">
+              "Cambodia stole my heart. The temples, the people, the food —
+              absolutely magical! I can't wait to go back."
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-14 h-14 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg"
+              >
+                N
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">Nary M.</h4>
+                <div class="flex text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed">
+              "Best trip I've ever taken. Our guide knew every hidden gem in
+              Siem Reap, and the sunrise at Angkor Wat was life-changing."
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate__animated animate__fadeInUp animate__delay-2s"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-14 h-14 bg-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg"
+              >
+                O
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">Oudom R.</h4>
+                <div class="flex text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed">
+              "From the beaches in Koh Rong to the mountains in Mondulkiri,
+              every day was a new and wonderful adventure."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Feedback Form Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row bg-white rounded-xl shadow-xl overflow-hidden"
+          >
+            <!-- Left side - Form -->
+            <div class="w-full p-8 lg:p-12">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                Get in Touch
+              </h2>
+              <p class="text-gray-600 mb-8">
+                Have questions about traveling to Cambodia? Our travel experts
+                are here to help. Fill out the form below and we'll get back to
+                you shortly.
+              </p>
+
+              <form action="#" method="POST">
+                <div class="mb-6">
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="interest"
+                    class="block text-gray-700 font-medium mb-2"
+                    >I'm interested in</label
+                  >
+                  <select
+                    id="interest"
+                    name="interest"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="" disabled selected>
+                      Select your interest
+                    </option>
+                    <option value="temples">Angkor & Ancient Temples</option>
+                    <option value="coastal">Coastal & Island Escapes</option>
+                    <option value="nature">Eco-Adventure & Wildlife</option>
+                    <option value="urban">Phnom Penh City Life</option>
+                    <option value="custom">Custom Khmer Itinerary</option>
+                  </select>
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Your Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Tell us what you're looking for"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
