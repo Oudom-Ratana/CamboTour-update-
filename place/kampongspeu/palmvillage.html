@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampong Speu Palm Sugar | Traditional Villages - Cambodia</title>
+    <link rel="stylesheet" href="../../src/output.css">
+    <style>
+        .slide { display: none; }
+        .slide.active { display: block; animation: fade 1.5s; }
+        @keyframes fade {
+            from { opacity: 0.4; } 
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="dark:bg-[#0a120e]">
+     <header class=" bg-white dark:bg-[#0a120e] mb-4 py-5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-1 md:flex md:items-center md:gap-12">
+    <a class="flex items-center" href="#">
+    <img 
+      class="w-15 h-15 mt-3 rounded-full dark:hidden" 
+      src="../../CamboTour_logo.png" 
+      alt="CamboTour Light Logo"
+    >
+
+    <img 
+      class="hidden w-15 h-15 mt-3 rounded-full dark:block dark:border-1 dark:border-[#D4AF37] shadow-amber-300" 
+      src="../../CamboTour_darklogo.png" 
+      alt="CamboTour Dark Logo"
+    >
+  </a>
+</div>
+
+          <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+              <ul class="flex items-center gap-6 text-sm">
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../homepage.html"
+                  >
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../destination.html"
+                  >
+                    Destination
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../activities.html"
+                  >
+                    Activities
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../about.html"
+                  >
+                    About & Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="flex items-center gap-4">
+              <div class="sm:flex sm:gap-4">
+                <a
+                  class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500"
+                  href="../../login.html"
+                >
+                  Login
+                </a>
+
+                <div class="hidden sm:flex">
+                  <a
+                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                    href="../../login.html"
+                  >
+                    Register
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5  rounded-md"
+              >
+                <button
+                  onclick="(() => document.body.classList.toggle('dark'))()"
+                  class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <svg
+                    class="fill-[#1b4332] block dark:hidden"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="fill-yellow-500 hidden dark:block"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="block md:hidden">
+                <button
+                  class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="relative h-[500px] w-full overflow-hidden dark:bg-[#0a120e]">
+        <div class="slide h-full w-full">
+            <img src="https://gdb.voanews.com/48a40411-3190-4703-b4b6-7a3d7b10ccae_w1080_h608_s.jpg" class="w-full h-full object-cover opacity-70" alt="Palm sugar harvest">
+        </div>
+        <div class="slide h-full w-full">
+            <img src="https://image.freshnewsasia.com/2019/022/fn-2019-04-06-12-58-05-0.jpg" class="w-full h-full object-cover opacity-70" alt="Boiling palm sugar in traditional kettles">
+        </div>
+        
+    </div>
+
+    <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+                <div class="max-w-6xl mx-auto">
+                    <header class="mt-8">
+                        <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-200 mb-2">Kampong Speu Palm Sugar Villages</h1>
+                        <p class="text-[#e69111] text-lg font-medium">Kampong Speu Province</p>
+                        
+                        <div class="flex flex-wrap gap-6 mt-6 text-sm">
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">📍</span> 15–30 km north of Kampong Speu town</div>
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">☀️</span> Year-round (best Nov–May)</div>
+                        </div>
+                    </header>
+
+                    <div class="grid md:grid-cols-3 gap-12 mt-12">
+                        <div class="md:col-span-2 space-y-6">
+                            <h2 class="text-2xl text-gray-900 font-bold dark:text-white border-b border-white/10 pb-2">Sweet Tradition of Cambodia</h2>
+                            <p class="leading-relaxed">
+                                The <strong class="text-[#e69111]">Kampong Speu Palm Sugar Villages</strong> are the heart of Cambodia’s traditional palm sugar industry. For generations, local families have climbed sugar palm trees (Borassus flabellifer) to harvest the sweet sap, which is then boiled down into rich, aromatic sugar cakes. This ancient craft received <strong class="text-[#e69111]">GI (Geographical Indication)</strong> status from the Cambodian government, recognizing its unique quality and heritage.
+                            </p>
+                            <p class="leading-relaxed">
+                                Scattered across the rural countryside north of the provincial capital, villages like Oudong, Prey Kuy, and Chambok offer visitors a glimpse into this slow, sustainable lifestyle. You can watch men ascend tall palm trunks with bamboo ladders, collect the sap in clay pots, and then see women stir giant copper kettles over wood fires until the syrup crystallizes into golden-brown blocks of pure palm sugar.
+                            </p>
+                            <p class="leading-relaxed">
+                                The finished product has a complex caramel flavor with hints of vanilla and toffee – far superior to refined sugar. It is used in Cambodian desserts, marinades, and even as a natural sweetener for coffee. Visitors can buy fresh sugar cakes, palm wine, and handwoven baskets directly from the producers. The villages are also dotted with ancient pagodas and peaceful rice fields, making for a relaxing half‑day trip from Phnom Penh or Kampong Speu.
+                            </p>
+                            <div class="rounded-3xl overflow-hidden border-4 border-gray-100 shadow-md mt-6">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.1234567890123!2d104.55000000000001!3d11.750000000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31094f7a2b5c8d0e%3A0x6a3b2c1d4e5f6a7b!2sKampong%20Speu%20Palm%20Sugar%20Villages!5e0!3m2!1sen!2skh!4v1745692000000!5m2!1sen!2skh" 
+                                    width="100%" 
+                                    height="350" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <div class="dark:bg-white/5 p-8 transition hover:shadow-2xl rounded-[2rem] border border-white/5 bg-[#1b4332] m-auto h-fit w-full">
+                            <h2 class="text-xl font-bold text-white mb-6">Visitor Guide</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="text-emerald-500 font-bold text-sm uppercase mb-2">✓ Things You Can Do</h4>
+                                    <ul class="text-sm space-y-2 text-white/80">
+                                        <li>• Watch palm sap harvesting and traditional boiling</li>
+                                        <li>• Taste fresh, warm palm sugar straight from the kettle</li>
+                                        <li>• Buy GI‑certified palm sugar cakes, palm wine, and crafts</li>
+                                        <li>• Visit nearby Oudong Mountain and ancient pagodas</li>
+                                        <li>• Cycle through sugar palm forests and rice paddies</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-red-500 font-bold text-sm uppercase mb-2">✗ Things You Can't</h4>
+                                    <ul class="text-sm space-y-2 text-gray-400">
+                                        <li>• Climb the palm trees yourself (dangerous without training)</li>
+                                        <li>• Disturb the animals or damage the tree trunks</li>
+                                        <li>• Enter sugar‑boiling huts without permission</li>
+                                        <li>• Litter or leave plastic waste in the villages</li>
+                                    </ul>
+                                </div>
+                                <div class="pt-4 border-t border-white/20">
+                                    <p class="text-xs text-white/60"><span class="font-semibold">💡 Pro tip:</span> Visit in the morning (8–11 AM) when sugar boiling is active. The best villages are about 20 minutes north of Kampong Speu town. Hire a local guide or just ask friendly families – they are proud to show their craft.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].classList.add("active");
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</html>

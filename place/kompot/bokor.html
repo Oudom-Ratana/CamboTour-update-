@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bokor National Park | Abandoned Hill Station - Kampot</title>
+    <link rel="stylesheet" href="../../src/output.css">
+    <style>
+        .slide { display: none; }
+        .slide.active { display: block; animation: fade 1.5s; }
+        @keyframes fade {
+            from { opacity: 0.4; } 
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="dark:bg-[#0a120e]">
+     <header class=" bg-white dark:bg-[#0a120e] mb-4 py-5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-1 md:flex md:items-center md:gap-12">
+    <a class="flex items-center" href="#">
+    <img 
+      class="w-15 h-15 mt-3 rounded-full dark:hidden" 
+      src="../../CamboTour_logo.png" 
+      alt="CamboTour Light Logo"
+    >
+
+    <img 
+      class="hidden w-15 h-15 mt-3 rounded-full dark:block dark:border-1 dark:border-[#D4AF37] shadow-amber-300" 
+      src="../../CamboTour_darklogo.png" 
+      alt="CamboTour Dark Logo"
+    >
+  </a>
+</div>
+
+          <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+              <ul class="flex items-center gap-6 text-sm">
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../homepage.html"
+                  >
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../destination.html"
+                  >
+                    Destination
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../activities.html"
+                  >
+                    Activities
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../about.html"
+                  >
+                    About & Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="flex items-center gap-4">
+              <div class="sm:flex sm:gap-4">
+                <a
+                  class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500"
+                  href="../../login.html"
+                >
+                  Login
+                </a>
+
+                <div class="hidden sm:flex">
+                  <a
+                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                    href="../../login.html"
+                  >
+                    Register
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5  rounded-md"
+              >
+                <button
+                  onclick="(() => document.body.classList.toggle('dark'))()"
+                  class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <svg
+                    class="fill-[#1b4332] block dark:hidden"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="fill-yellow-500 hidden dark:block"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="block md:hidden">
+                <button
+                  class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="relative h-[500px] w-full overflow-hidden dark:bg-[#0a120e]">
+        <div class="slide h-full w-full">
+            <img src="https://cdn.projectexpedition.com/photos/310728touractivity9916f955c8be46598f13ad90a56d1224_sized.jpg" class="w-full h-full object-cover opacity-70" alt="Bokor Hill Station ruins">
+        </div>
+        <div class="slide h-full w-full">
+            <img src="https://www.asiakingtravel.com/images/thumbs/2024/02/9864/bokor-national-park-banner_1900x700xcrop.webp" class="w-full h-full object-cover opacity-70" alt="Bokor Catholic church">
+        </div>
+        <div class="slide h-full w-full">
+            <img src="https://www.pelago.com/img/products/KH-Cambodia/bokor-national-park-private-day-trip-from-phnom-penh/aa831dd4-04f1-426a-a3d6-50c2c68f2483_bokor-national-park-private-day-trip-from-phnom-penh-xlarge.jpg" class="w-full h-full object-cover opacity-70" alt="View from Bokor mountain">
+        </div>
+    </div>
+
+    <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+                <div class="max-w-6xl mx-auto">
+                    <header class="mt-8">
+                        <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-200 mb-2">Bokor National Park</h1>
+                        <p class="text-[#e69111] text-lg font-medium">Kampot Province</p>
+                        
+                        <div class="flex flex-wrap gap-6 mt-6 text-sm">
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">📍</span> 35 km west of Kampot city</div>
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">☀️</span> Nov — Mar (Cool & dry)</div>
+                        </div>
+                    </header>
+
+                    <div class="grid md:grid-cols-3 gap-12 mt-12">
+                        <div class="md:col-span-2 space-y-6">
+                            <h2 class="text-2xl text-gray-900 font-bold dark:text-white border-b border-white/10 pb-2">Ghostly Hill Station & Pristine Rainforest</h2>
+                            <p class="leading-relaxed">
+                                <strong class="text-[#e69111]">Bokor National Park</strong> covers over 1,500 square kilometers of dense montane rainforest atop the Elephant Mountains. The park's main attraction is the eerie, abandoned <strong class="text-[#e69111]">Bokor Hill Station</strong>, a French colonial resort built in the 1920s and abandoned during the Khmer Rouge era. Today, crumbling hotels, a ruined Catholic church, a royal residence, and the infamous "Black Palace" stand frozen in time, often shrouded in mist.
+                            </p>
+                            <p class="leading-relaxed">
+                                At over 1,000 meters above sea level, the summit offers breathtaking views of the Gulf of Thailand, Kampot town, and the surrounding jungle. On clear days, you can see the distant islands of Kep and even Vietnam. The park is home to gibbons, sun bears, clouded leopards, and over 300 bird species. A new luxury resort (Thansur) has been built, but most visitors come for the haunting ruins and cool mountain air.
+                            </p>
+                            <p class="leading-relaxed">
+                                Access is via a winding paved road (good condition) from Kampot. The park has several marked trails, waterfalls (Popokvil), and picnic areas. It can be visited as a day trip from Kampot or Kep. Be prepared for sudden weather changes – fog and rain are common even in dry season. Bring a jacket – it's much cooler than the coast.
+                            </p>
+                            <div class="rounded-3xl overflow-hidden border-4 border-gray-100 shadow-md mt-6">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.218097666136!2d104.0291132!3d10.640157799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31085b71ee20bc43%3A0x438fd4572aef5640!2sPreah%20Monivong%20Bokor%20National%20Park!5e0!3m2!1sen!2skh!4v1775634621721!5m2!1sen!2skh" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="dark:bg-white/5 p-8 transition hover:shadow-2xl rounded-[2rem] border border-white/5 bg-[#1b4332] m-auto h-fit w-full">
+                            <h2 class="text-xl font-bold text-white mb-6">Visitor Guide</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="text-emerald-500 font-bold text-sm uppercase mb-2">✓ Things You Can Do</h4>
+                                    <ul class="text-sm space-y-2 text-white/80">
+                                        <li>• Explore the abandoned French hill station ruins</li>
+                                        <li>• Visit the old Catholic church and the Black Palace</li>
+                                        <li>• Hike to Popokvil Waterfall (two tiers)</li>
+                                        <li>• Enjoy panoramic views of the Gulf of Thailand</li>
+                                        <li>• Watch for wildlife – gibbons, hornbills, monkeys</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-red-500 font-bold text-sm uppercase mb-2">✗ Things You Can't</h4>
+                                    <ul class="text-sm space-y-2 text-gray-400">
+                                        <li>• Enter unstable or barricaded buildings</li>
+                                        <li>• Litter or damage the historical ruins</li>
+                                        <li>• Feed or disturb wildlife</li>
+                                        <li>• Swim in Popokvil waterfall (dangerous currents)</li>
+                                    </ul>
+                                </div>
+                                <div class="pt-4 border-t border-white/20">
+                                    <p class="text-xs text-white/60"><span class="font-semibold">💡 Pro tip:</span> Rent a motorbike or hire a tuk‑tuk from Kampot ($25–30 round trip, including waiting). Start early (8 AM) to avoid afternoon fog. Bring a jacket, water, and snacks – there are few shops on the mountain. The entry fee is about $5 per person.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].classList.add("active");
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</html>

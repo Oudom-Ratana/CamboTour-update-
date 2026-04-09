@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampong Chhnang Floating Village | Water World - Cambodia</title>
+    <link rel="stylesheet" href="../../src/output.css">
+    <style>
+        .slide { display: none; }
+        .slide.active { display: block; animation: fade 1.5s; }
+        @keyframes fade {
+            from { opacity: 0.4; } 
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+     <header class=" bg-white dark:bg-[#0a120e] mb-4 py-5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-1 md:flex md:items-center md:gap-12">
+    <a class="flex items-center" href="#">
+    <img 
+      class="w-15 h-15 mt-3 rounded-full dark:hidden" 
+      src="../../CamboTour_logo.png" 
+      alt="CamboTour Light Logo"
+    >
+
+    <img 
+      class="hidden w-15 h-15 mt-3 rounded-full dark:block dark:border-1 dark:border-[#D4AF37] shadow-amber-300" 
+      src="../../CamboTour_darklogo.png" 
+      alt="CamboTour Dark Logo"
+    >
+  </a>
+</div>
+
+          <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+              <ul class="flex items-center gap-6 text-sm">
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../homepage.html"
+                  >
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../destination.html"
+                  >
+                    Destination
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../activities.html"
+                  >
+                    Activities
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../about.html"
+                  >
+                    About & Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="flex items-center gap-4">
+              <div class="sm:flex sm:gap-4">
+                <a
+                  class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500"
+                  href="../../login.html"
+                >
+                  Login
+                </a>
+
+                <div class="hidden sm:flex">
+                  <a
+                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                    href="../../login.html"
+                  >
+                    Register
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5  rounded-md"
+              >
+                <button
+                  onclick="(() => document.body.classList.toggle('dark'))()"
+                  class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <svg
+                    class="fill-[#1b4332] block dark:hidden"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="fill-yellow-500 hidden dark:block"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="block md:hidden">
+                <button
+                  class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="relative h-[500px] w-full overflow-hidden dark:bg-[#0a120e]">
+        <div class="slide h-full w-full">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Floating_village_by_gul791.jpg" class="w-full h-full object-cover opacity-70" alt="Kampong Chhnang floating houses">
+        </div>
+        <div class="slide h-full w-full">
+            <img src="https://xlblkntwxixpznhaekso.supabase.co/storage/v1/object/public/news-images/featured/Floating_village_in-Kampong-Chhnang.jpg" class="w-full h-full object-cover opacity-70" alt="Boat tour floating village">
+        </div>
+        <div class="slide h-full w-full">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/a9/ab/ea/kampong-chhnang-floating.jpg?w=900&h=-1&s=1" class="w-full h-full object-cover opacity-70" alt="Fishing boats and stilted homes">
+        </div>
+    </div>
+
+    <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+                <div class="max-w-6xl mx-auto">
+                    <header class="mt-8">
+                        <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-200 mb-2">Kampong Chhnang Floating Village</h1>
+                        <p class="text-[#e69111] text-lg font-medium">Kampong Chhnang Province</p>
+                        
+                        <div class="flex flex-wrap gap-6 mt-6 text-sm">
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">📍</span> 10 km east of Kampong Chhnang town</div>
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">☀️</span> Year-round (best Nov–Mar)</div>
+                        </div>
+                    </header>
+
+                    <div class="grid md:grid-cols-3 gap-12 mt-12">
+                        <div class="md:col-span-2 space-y-6">
+                            <h2 class="text-2xl text-gray-900 font-bold dark:text-white border-b border-white/10 pb-2">Life on the Tonle Sap</h2>
+                            <p class="leading-relaxed">
+                                <strong class="text-[#e69111]">Kampong Chhnang Floating Village</strong> is one of the most authentic and least-touristy floating communities in Cambodia. Located on the edge of the Tonle Sap Lake, the village consists of hundreds of homes, schools, churches, and even a floating basketball court – all built on stilts or floating platforms that rise and fall with the water level.
+                            </p>
+                            <p class="leading-relaxed">
+                                The area is also famous for <strong class="text-[#e69111]">traditional pottery</strong>. Kampong Chhnang means "Port of Pottery" – local families have been making clay pots, jars, and water storage vessels for centuries using techniques passed down through generations. You can visit workshops and watch artisans at work.
+                            </p>
+                            <p class="leading-relaxed">
+                                A boat tour takes you through narrow canals lined with floating homes, past fish farms, crocodile pens, and floating markets. The villagers are welcoming, and you'll see daily life unfolding on the water – children rowing to school in small boats, women washing clothes on their floating porches, and fishermen casting nets. It's a living water world that feels a world away from the modern cities.
+                            </p>
+                            <div class="rounded-3xl overflow-hidden border-4 border-gray-100 shadow-md mt-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.354691625822!2d104.6684097!3d12.2918839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310e8db87b48437d%3A0x5f5260798b3551cb!2sKampong%20Chhnang%20Floating%20Village!5e0!3m2!1sen!2skh!4v1775630475814!5m2!1sen!2skh" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="dark:bg-white/5 p-8 transition hover:shadow-2xl rounded-[2rem] border border-white/5 bg-[#1b4332] m-auto h-fit w-full">
+                            <h2 class="text-xl font-bold text-white mb-6">Visitor Guide</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="text-emerald-500 font-bold text-sm uppercase mb-2">✓ Things You Can Do</h4>
+                                    <ul class="text-sm space-y-2 text-white/80">
+                                        <li>• Take a private boat tour through the floating village (1–2 hours)</li>
+                                        <li>• Visit traditional pottery workshops and try making a pot</li>
+                                        <li>• See floating schools, churches, and fish farms</li>
+                                        <li>• Buy handmade clay pots and local crafts</li>
+                                        <li>• Watch sunset over the Tonle Sap from a boat</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-red-500 font-bold text-sm uppercase mb-2">✗ Things You Can't</h4>
+                                    <ul class="text-sm space-y-2 text-gray-400">
+                                        <li>• Swim – water is murky and has strong currents</li>
+                                        <li>• Litter – protect the fragile lake ecosystem</li>
+                                        <li>• Enter homes without invitation</li>
+                                        <li>• Use drones without asking local authorities</li>
+                                    </ul>
+                                </div>
+                                <div class="pt-4 border-t border-white/20">
+                                    <p class="text-xs text-white/60"><span class="font-semibold">💡 Pro tip:</span> Hire a boat from the dock near Kampong Chhnang town – expect $15–25 for a private tour. Go early morning (6–8 AM) to see daily life at its most active. Combine with a visit to Phnom Da or the pottery villages.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].classList.add("active");
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</html>

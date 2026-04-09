@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="dark:bg-[#0a120e]">
+     <header class=" bg-white dark:bg-[#0a120e] mb-4 py-5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-1 md:flex md:items-center md:gap-12">
+    <a class="flex items-center" href="#">
+    <img 
+      class="w-15 h-15 mt-3 rounded-full dark:hidden" 
+      src="../../CamboTour_logo.png" 
+      alt="CamboTour Light Logo"
+    >
+
+    <img 
+      class="hidden w-15 h-15 mt-3 rounded-full dark:block dark:border-1 dark:border-[#D4AF37] shadow-amber-300" 
+      src="../../CamboTour_darklogo.png" 
+      alt="CamboTour Dark Logo"
+    >
+  </a>
+</div>
+
+          <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+              <ul class="flex items-center gap-6 text-sm">
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="./homepage.html"
+                  >
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="./destination.html"
+                  >
+                    Destination
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="./activities.html"
+                  >
+                    Activities
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="./about.html"
+                  >
+                    About & Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="flex items-center gap-4">
+              <div class="sm:flex sm:gap-4">
+                <a
+                  class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500"
+                  href="./login.html#loginTab"
+                >
+                  Login
+                </a>
+
+                <div class="hidden sm:flex">
+                  <a
+                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                    href="./login.html#registerTab"
+                    
+                  >
+                    Register
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5  rounded-md"
+              >
+                <button
+                  onclick="(() => document.body.classList.toggle('dark'))()"
+                  class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <svg
+                    class="fill-[#1b4332] block dark:hidden"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="fill-yellow-500 hidden dark:block"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="block md:hidden">
+                <button
+                  class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="flex justify-center flex-wrap max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 gap-10"
+    >
+
+        <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 
+         hover:border-[#e69111]/30">
+    <div class="relative h-72">
+        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/16/6e/93/c9.jpg" 
+            class="w-full h-full object-cover" alt="Kulen Waterfall">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Siem Reap
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★★</span>
+        <span class="text-gray-400 text-xs">(100+ Reviews)</span>
+        
+                
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Phnom Kulen Falls</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        Swim in sacred waterfalls and see the River of a Thousand Lingas. A perfect mountain escape from the heat.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+15</div>
+        </div>
+        <a href="./place/siemreap/koulenmount.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+        </div>
+
+        <div class="group max-w-xs bg-white dark:bg-[#1e2229]  shadow-md hover:shadow-2xl overflow-hidden rounded-[2rem] dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz_q1vUOLONunEIY3e9dgiViVs0EwlxNoL1A&s" 
+            class="w-full h-full object-cover" alt="Beng Mealea Temple">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Siem Reap
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(480+ Reviews)</span>
+        
+                
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">បឹងមាលា (Beng Mealea)</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        A mysterious 12th-century jungle temple left largely unrestored. Climb over moss-covered sandstone blocks and explore hidden galleries surrounded by towering trees.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+12</div>
+        </div>
+        <a href="./place/siemreap/beungmelea.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+        <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://www.asiakingtravel.com/images/thumbs/2024/03/10289/kep-national-park-travel-guide_600x315xcrop.webp" 
+            class="w-full h-full object-cover" alt="Kep National Park">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Kep 
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(2,180+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Kep National Park</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        Hike through lush jungle trails offering stunning coastal and mountain views. The 8‑km loop passes abandoned French villas, wild macaques, and panoramic lookout points. Perfect for sunrise or late afternoon walks.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+43</div>
+        </div>
+        <a href="../place/kep/keppark.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+   <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://www.gocambodia.tours/wp-content/uploads/2019/05/Rabbit-Island-Cambodia-Koh-Tonsay-Travel-Guide.jpg" 
+            class="w-full h-full object-cover" alt="Rabbit Island Koh Tonsay">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Kep
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(2,760+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Rabbit Island (Koh Tonsay)</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        A tranquil island escape with powdery white sand, swaying palms, and turquoise water. Swim, snorkel, or simply relax in a hammock. Stay overnight in basic bungalows for a true castaway experience.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+52</div>
+        </div>
+        <a href="../place/kep/kohtonsay.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+        <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border-transparent
+         hover:border-[#e69111]/30">
+    <div class="relative h-72">
+        <img src="https://cdn.britannica.com/49/94449-050-ECB0E7C2/Angkor-Wat-temple-complex-Cambodia.jpg" 
+            class="w-full h-full object-cover" alt="Angkor Wat Sunrise">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Siem Reap
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★★</span>
+        <span class="text-gray-400 text-xs">(1,200+ Reviews)</span>
+        
+                
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Angkor Wat Temple</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        Witness the breathtaking sunrise over the world’s largest religious monument. Explore ancient carvings and towering spires.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+30</div>
+        </div>
+        <a href="./place/siemreap/angkorwat.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+<div
+        class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent"
+      >
+        <div class="relative h-72">
+          <img
+            src="https://i0.wp.com/helloangkor.com/wp-content/uploads/2021/01/HA5D1981.jpg?fit=1200%2C800&ssl=1"
+            class="w-full h-full object-cover"
+            alt="Banteay Chhmar Temple Banteay Meanchey"
+          />
+          <div
+            class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md"
+          >
+            📍 Banteay Meanchey
+          </div>
+        </div>
+
+        <div class="p-8">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-yellow-500 text-lg">★★★★★</span>
+            <span class="text-gray-400 text-xs">(2,890+ Reviews)</span>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+            Banteay Chhmar Temple
+          </h3>
+
+          <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+            Often called "the other Angkor," this sprawling 12th-century temple
+            complex was built by King Jayavarman VII. Explore jungle-covered
+            face towers, intricate bas-reliefs, and crumbling corridors with
+            almost no crowds. Stay overnight in a nearby community homestay for
+            a truly authentic experience.
+          </p>
+
+          <div class="flex items-center justify-between">
+            <div class="flex -space-x-2">
+              <div
+                class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"
+              ></div>
+              <div
+                class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"
+              ></div>
+              <div
+                class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold"
+              >
+                +41
+              </div>
+            </div>
+            <a
+              href="#"
+              class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all"
+            >
+              Explore <span class="ml-1">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://www.asiakingtravel.com/cuploads/files/Silver-pagoda-2.jpg" 
+            class="w-full h-full object-cover" alt="Royal Palace Phnom Penh">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Phnom Penh
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★★</span>
+        <span class="text-gray-400 text-xs">(4,520+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Royal Palace & Silver Pagoda</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        The official residence of King Norodom Sihamoni. Marvel at the gleaming throne hall, silver floor tiles (over 5,000), the Emerald Buddha, and a life‑size gold Buddha adorned with 9,584 diamonds. A breathtaking showcase of Khmer craftsmanship.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+86</div>
+        </div>
+        <a href="../place/phnompenh/royalpalace.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+    <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://www.historyhit.com/app/uploads/bis-images/5150019/Tuol-Sleng-Genocide-Museum-690x388.jpg?x15201" 
+            class="w-full h-full object-cover" alt="Tuol Sleng Genocide Museum Phnom Penh">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Phnom Penh
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(5,210+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Tuol Sleng Genocide Museum (S-21)</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        A former high school turned into a Khmer Rouge torture and interrogation center. Walk through the haunting rooms, see survivor portraits, and learn about the 17,000+ prisoners who passed through. A somber but essential stop to understand Cambodia's recent history.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+94</div>
+        </div>
+        <a href="../place/phnompenh/toulsleng.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://www.khmertimeskh.com/wp-content/uploads/2025/06/Walk-Street.jpg" 
+            class="w-full h-full object-cover" alt="Sisowath Quay Riverside Phnom Penh">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Phnom Penh
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(3,140+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Riverside Walk Street</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        The beating heart of Phnom Penh's nightlife! Stroll along the Tonle Sap riverfront, enjoy street food stalls, live music, rooftop bars, and lively pubs. Perfect for sunset walks, people‑watching, and experiencing the city's energetic yet laid‑back vibe.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+53</div>
+        </div>
+        <a href="../place/phnompenh/walkstreet.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+      <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://www.gocambodia.tours/wp-content/uploads/2024/07/Koh-Thmei-Cambodia-trip.jpg" 
+            class="w-full h-full object-cover" alt="Ream National Park Sihanoukville">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Preah Sihanouk
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(1,890+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Ream National Park</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        A stunning coastal national park with mangrove forests, river estuaries, and untouched beaches. Take a boat tour to spot dolphins, monitor lizards, and exotic birds. Hike to a waterfall or visit the floating village – an eco‑adventure for nature lovers.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+32</div>
+        </div>
+        <a href="../place/preahsihanouk/ream.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+   <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXJS2u8-KGRiVX7dyowxPK2QlpJuLYm5Coq6-AUIq5u0ZMdtmdNRkamWIoy3mNT_Uc8bPK6CWR5wcet_Pcvdw4xON8ajyFEyaFPp4b4YExJECFC6QhUAWnHEQ6sntP_AvSaSgpXKoNEMrNLcFgArnEuvi35H3_Y5zygQwmwlOUezOK6tP0QxcRWHLWO8g/s1600/Kbal%20Chhay%20Waterfalls.jpg" 
+            class="w-full h-full object-cover" alt="Kbal Chhay Waterfall Sihanoukville">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 8km from Sihanoukville
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★☆</span>
+        <span class="text-gray-400 text-xs">(1,340+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Kbal Chhay Waterfall</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        A scenic multi‑tiered waterfall surrounded by jungle, just a short ride from Sihanoukville. Cool off in natural pools, enjoy a picnic, or eat fresh grilled fish from local vendors. Best visited during rainy season (July–October) for the fullest flow.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+22</div>
+        </div>
+        <a href="../place/preahsihanouk/kbalchhay.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+     <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://www.guidetrip.info/asset/img/gallery_resort/5ad5772fb5244.jpg" 
+            class="w-full h-full object-cover" alt="Ang Trapeang Thmor Bird Sanctuary Banteay Meanchey">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Banteay Meanchey 
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(1,580+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Ang Trapeang Thmor</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        A unique wetland ecosystem home to over 200 bird species, including the endangered Sarus Crane (over 300 birds). Spot globally threatened species, the rare Eld's deer, and enjoy world‑class birdwatching. Best visited from February to May for crane sightings – a paradise for nature lovers.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+32</div>
+        </div>
+        <a href="#" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+    <div class="group max-w-xs bg-white dark:bg-[#1e2229]  shadow-md hover:shadow-2xl overflow-hidden rounded-[2rem] dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://www.gocambotravel.com/wp-content/uploads/2025/05/Phnom-Sampeau-1.jpg" 
+            class="w-full h-full object-cover" alt="Phnom Sampeau Battambang">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Battambang
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(620+ Reviews)</span>
+        
+                
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Phnom Sampeau Mountain</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        Climb to the golden stupa for panoramic views, explore the infamous killing caves, and witness millions of bats spiraling out at sunset – a true Battambang highlight.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+16</div>
+        </div>
+        <a href="../place/battambang/sampovmountain.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0e/e9/b7/68.jpg" 
+            class="w-full h-full object-cover" alt="Bamboo train Ek Phnom Battambang">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Battambang
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(1,200+ Reviews)</span>
+        
+                
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Bamboo Train in Ek Phnom</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        Hop on the iconic bamboo train rushing through countryside tracks in Ek Phnom district. A fun, bumpy ride past rice paddies and villages – an unforgettable Battambang adventure.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+24</div>
+        </div>
+        <a href="../place/battambang/bambooTrain.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://t4.ftcdn.net/jpg/03/99/92/41/360_F_399924147_8pruK175pKgrqLbdVlOHJvRbta6SteKs.jpg" 
+            class="w-full h-full object-cover" alt="Banan Temple Battambang">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Battambang
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★☆</span>
+        <span class="text-gray-400 text-xs">(890+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Banan Temple (Phnom Banan)</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        Climb 358 steps to reach this 11th-century Angkorian mountaintop temple. Enjoy panoramic views of rice paddies, explore five ancient lotus towers, and catch a stunning sunset away from the crowds.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+18</div>
+        </div>
+        <a href="../place/battambang/banantemple.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
+    <div class="relative h-72">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUzAaaE--LMkFNlG_GEELXDiEj1LxN3x88ww&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUzAaaE--LMkFNlG_GEELXDiEj1LxN3x88ww&s" 
+            class="w-full h-full object-cover" alt="Bat Cave Battambang - millions of bats at sunset">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Phnom Sampeau, Battambang
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★★</span>
+        <span class="text-gray-400 text-xs">(2,450+ Reviews)</span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Bat Cave – Sunset Spectacle</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        Witness one of nature's greatest shows – millions of wrinkle-lipped bats spiral out of the cave mouth as dusk falls. The continuous black ribbon lasts over 30 minutes. Grab a cold drink from the hilltop cafés and watch the magic unfold.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+32</div>
+        </div>
+        <a href="../place/battambang/batcave.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border-transparent  hover:border-[#e69111]/30">
+    <div class="relative h-72">
+        <img src="https://www.siemreap.net/wp-content/uploads/2018/01/pub-street-siem-reap-cambodia.jpg" 
+            class="w-full h-full object-cover" alt="Pub Street Nightlife">
+        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
+        📍 Siem Reap
+        </div>
+    </div>
+
+    <div class="p-8">
+        <div class="flex items-center gap-2 mb-2">
+        <span class="text-yellow-500 text-lg">★★★★½</span>
+        <span class="text-gray-400 text-xs">(850+ Reviews)</span>
+        
+                
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Pub Street</h3>
+        
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+        The heart of Siem Reap's nightlife! Enjoy live music, street food, affordable cocktails, and a buzzing atmosphere until late.
+        </p>
+
+        <div class="flex items-center justify-between">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+22</div>
+        </div>
+        <a href="#" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
+            Explore <span class="ml-1">→</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+    </div>
+  </body>
+</html>

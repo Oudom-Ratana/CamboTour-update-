@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preah Vihear Temple | UNESCO Cliff-top Sanctuary - Cambodia</title>
+    <link rel="stylesheet" href="../../src/output.css">
+    <style>
+        .slide { display: none; }
+        .slide.active { display: block; animation: fade 1.5s; }
+        @keyframes fade {
+            from { opacity: 0.4; } 
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="dark:bg-[#0a120e]">
+     <header class=" bg-white dark:bg-[#0a120e] mb-4 py-5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-1 md:flex md:items-center md:gap-12">
+    <a class="flex items-center" href="#">
+    <img 
+      class="w-15 h-15 mt-3 rounded-full dark:hidden" 
+      src="../../CamboTour_logo.png" 
+      alt="CamboTour Light Logo"
+    >
+
+    <img 
+      class="hidden w-15 h-15 mt-3 rounded-full dark:block dark:border-1 dark:border-[#D4AF37] shadow-amber-300" 
+      src="../../CamboTour_darklogo.png" 
+      alt="CamboTour Dark Logo"
+    >
+  </a>
+</div>
+
+          <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+              <ul class="flex items-center gap-6 text-sm">
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../homepage.html"
+                  >
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../destination.html"
+                  >
+                    Destination
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../activities.html"
+                  >
+                    Activities
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../about.html"
+                  >
+                    About & Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="flex items-center gap-4">
+              <div class="sm:flex sm:gap-4">
+                <a
+                  class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500"
+                  href="../../login.html"
+                >
+                  Login
+                </a>
+
+                <div class="hidden sm:flex">
+                  <a
+                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                    href="../../login.html"
+                  >
+                    Register
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5  rounded-md"
+              >
+                <button
+                  onclick="(() => document.body.classList.toggle('dark'))()"
+                  class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <svg
+                    class="fill-[#1b4332] block dark:hidden"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="fill-yellow-500 hidden dark:block"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="block md:hidden">
+                <button
+                  class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="relative h-[500px] w-full overflow-hidden dark:bg-[#0a120e]">
+        <div class="slide h-full w-full">
+            <img src="https://static.wixstatic.com/media/949475_758c791239d1439eb6d1a54729e707c1~mv2.jpg/v1/fill/w_880,h_513,al_c,q_85/949475_758c791239d1439eb6d1a54729e707c1~mv2.jpg" class="w-full h-full object-cover opacity-70" alt="Preah Vihear Temple main sanctuary">
+        </div>
+        <div class="slide h-full w-full">
+            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/6e/ec/a4.jpg" class="w-full h-full object-cover opacity-70" alt="Long causeway and gopuras">
+        </div>
+        <div class="slide h-full w-full">
+            <img src="https://napv.gov.kh/uploads/images/Gallery/Header_Slideshow/3.PV.jpg" alt="View from Preah Vihear cliff">
+        </div>
+    </div>
+
+    <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+                <div class="max-w-6xl mx-auto">
+                    <header class="mt-8">
+                        <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-200 mb-2">Preah Vihear Temple (Prasat Preah Vihear)</h1>
+                        <p class="text-[#e69111] text-lg font-medium">Preah Vihear Province, Cambodia</p>
+                        
+                        <div class="flex flex-wrap gap-6 mt-6 text-sm">
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">📍</span> Dângrêk Mountains, 140 km northwest of Siem Reap</div>
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">🏛️</span> UNESCO World Heritage Site (2008)</div>
+                        </div>
+                    </header>
+
+                    <div class="grid md:grid-cols-3 gap-12 mt-12">
+                        <div class="md:col-span-2 space-y-6">
+                            <h2 class="text-2xl text-gray-900 font-bold dark:text-white border-b border-white/10 pb-2">Dramatic Cliff‑top Khmer Sanctuary</h2>
+                            <p class="leading-relaxed">
+                                <strong class="text-[#e69111]">Preah Vihear Temple</strong> is one of the most spectacular and least‑visited Angkorian monuments in Cambodia. Built between the 9th and 12th centuries by several Khmer kings, the temple sits atop a 525‑meter cliff in the Dângrêk Mountains, directly on the Cambodian‑Thai border. Its dramatic location and stunning architecture earned it <strong class="text-[#e69111]">UNESCO World Heritage status</strong> in 2008.
+                            </p>
+                            <p class="leading-relaxed">
+                                Unlike most Khmer temples which are built on a flat axis, Preah Vihear is arranged along a north‑south axis, with a long causeway nearly 800 meters long leading to the main sanctuary. Visitors climb through five monumental gopuras (gateways), each offering increasingly breathtaking views of the plains below. The sanctuary itself is dedicated to the Hindu god Shiva, with exquisite sandstone carvings of deities, nagas, and floral motifs.
+                            </p>
+                            <p class="leading-relaxed">
+                                Because of its remote location and history of border conflict, Preah Vihear sees a fraction of the visitors of Angkor Wat. The journey is an adventure – a winding road up the mountain, then a climb of hundreds of steps or a vehicle shuttle to the top. The reward is panoramic views of the Cambodian jungle and the Thai lowlands, and the thrill of exploring a virtually crowd‑free masterpiece of Khmer architecture.
+                            </p>
+                            <div class="rounded-3xl overflow-hidden border-4 border-gray-100 shadow-md mt-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.6354041167347!2d104.6801886!3d14.390494299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3111481294cefc7b%3A0x26bb2adaf3a24570!2sPreah%20Vihear%20Temple!5e0!3m2!1sen!2skh!4v1775653377539!5m2!1sen!2skh" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="dark:bg-white/5 p-8 transition hover:shadow-2xl rounded-[2rem] border border-white/5 bg-[#1b4332] m-auto h-fit w-full">
+                            <h2 class="text-xl font-bold text-white mb-6">Visitor Guide</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="text-emerald-500 font-bold text-sm uppercase mb-2">✓ Things You Can Do</h4>
+                                    <ul class="text-sm space-y-2 text-white/80">
+                                        <li>• Walk the 800‑meter causeway through five gopuras</li>
+                                        <li>• Admire the cliff‑edge views over Cambodia and Thailand</li>
+                                        <li>• See intricate sandstone carvings of Shiva and Hindu mythology</li>
+                                        <li>• Explore the remote, uncrowded sanctuary (few tourists)</li>
+                                        <li>• Visit the onsite museum and border monument</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-red-500 font-bold text-sm uppercase mb-2">✗ Things You Can't</h4>
+                                    <ul class="text-sm space-y-2 text-gray-400">
+                                        <li>• Cross the border into Thailand at the temple</li>
+                                        <li>• Climb on unstable or crumbling structures</li>
+                                        <li>• Litter or damage the carvings</li>
+                                        <li>• Use drones without permission</li>
+                                    </ul>
+                                </div>
+                                <div class="pt-4 border-t border-white/20">
+                                    <p class="text-xs text-white/60"><span class="font-semibold">💡 Pro tip:</span> Hire a 4WD from Siem Reap or Phnom Penh – the road is winding and steep. Bring your passport (military checkpoint). Go early morning to avoid heat and afternoon clouds. The site has a vehicle shuttle from the base to the top ($5 round trip) – walking the stairs is strenuous but rewarding. Entry fee is about $10–12.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].classList.add("active");
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phnom Penh Walking Street | Riverside Night Market & Nightlife</title>
+    <link rel="stylesheet" href="../../src/output.css">
+    <style>
+        .slide { display: none; }
+        .slide.active { display: block; animation: fade 1.5s; }
+        @keyframes fade {
+            from { opacity: 0.4; } 
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="dark:bg-[#0a120e]">
+     <header class=" bg-white dark:bg-[#0a120e] mb-4 py-5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-1 md:flex md:items-center md:gap-12">
+    <a class="flex items-center" href="#">
+    <img 
+      class="w-15 h-15 mt-3 rounded-full dark:hidden" 
+      src="../../CamboTour_logo.png" 
+      alt="CamboTour Light Logo"
+    >
+
+    <img 
+      class="hidden w-15 h-15 mt-3 rounded-full dark:block dark:border-1 dark:border-[#D4AF37] shadow-amber-300" 
+      src="../../CamboTour_darklogo.png" 
+      alt="CamboTour Dark Logo"
+    >
+  </a>
+</div>
+
+          <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+              <ul class="flex items-center gap-6 text-sm">
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../homepage.html"
+                  >
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../destination.html"
+                  >
+                    Destination
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../activities.html"
+                  >
+                    Activities
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="text-gray-500 transition hover:text-gray-500/75 dark:text-white white dark:hover:text-white/75 font-medium"
+                    href="../../about.html"
+                  >
+                    About & Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="flex items-center gap-4">
+              <div class="sm:flex sm:gap-4">
+                <a
+                  class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500"
+                  href="../../login.html"
+                >
+                  Login
+                </a>
+
+                <div class="hidden sm:flex">
+                  <a
+                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                    href="../../login.html"
+                  >
+                    Register
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5  rounded-md"
+              >
+                <button
+                  onclick="(() => document.body.classList.toggle('dark'))()"
+                  class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <svg
+                    class="fill-[#1b4332] block dark:hidden"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="fill-yellow-500 hidden dark:block"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="block md:hidden">
+                <button
+                  class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:border-0.5  dark:text-white white dark:hover:text-white/75"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="relative h-[500px] w-full overflow-hidden dark:bg-[#0a120e]">
+        <div class="slide h-full w-full">
+            <img src="https://cambodiaspirit.com/wp-content/uploads/2026/01/Chaktomok-Walk-Street.webp" class="w-full h-full object-cover opacity-70" alt="Phnom Penh riverfront at night">
+        </div>
+        <div class="slide h-full w-full">
+            <img src="https://cms.siemreaper.click/uploads/Phnom_Penh_Walk_Street3_a571c3bceb.jpg" class="w-full h-full object-cover opacity-70" alt="Weekend walking street crowd">
+        </div>
+        <div class="slide h-full w-full">
+            <img src="https://www.khmertimeskh.com/wp-content/uploads/2025/06/Walk-Street.jpg" class="w-full h-full object-cover opacity-70" alt="Street food stalls">
+        </div>
+    </div>
+
+    <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="min-h-screen dark:bg-[#0a120e] text-gray-900 dark:text-gray-200 font-sans p-6 md:p-12">
+                <div class="max-w-6xl mx-auto">
+                    <header class="mt-8">
+                        <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-200 mb-2">Phnom Penh Walking Street</h1>
+                        <p class="text-[#e69111] text-lg font-medium">Sisowath Quay & Riverside – Phnom Penh, Cambodia</p>
+                        
+                        <div class="flex flex-wrap gap-6 mt-6 text-sm">
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">📍</span> Sisowath Quay, from near Wat Phnom to the Royal Palace</div>
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">📅</span> Saturday & Sunday evenings (6:00 PM – 11:00 PM)</div>
+                            <div class="flex items-center gap-2"><span class="text-[#e69111]">🚶</span> Car‑free pedestrian zone on weekends</div>
+                        </div>
+                    </header>
+
+                    <div class="grid md:grid-cols-3 gap-12 mt-12">
+                        <div class="md:col-span-2 space-y-6">
+                            <h2 class="text-2xl text-gray-900 font-bold dark:text-white border-b border-white/10 pb-2">Riverside Promenade Turned Night Market</h2>
+                            <p class="leading-relaxed">
+                                Since early 2025, Phnom Penh has launched a large‑scale <strong class="text-[#e69111]">weekend walking street</strong> along Sisowath Quay. Stretching approximately 1.5 kilometers from near Wat Phnom down to the Royal Palace area, the road is closed to vehicles on <strong class="text-[#e69111]">Saturday and Sunday evenings from 6:00 PM to 11:00 PM</strong>, transforming the riverfront into a lively pedestrian zone filled with food stalls, souvenir vendors, live music, and street performances.
+                            </p>
+                            <p class="leading-relaxed">
+                                Visitors can browse stalls selling traditional Khmer silk scarves (krama), wood carvings, silver jewelry, and handmade crafts. Food lovers will find everything from grilled squid and beef skewers to tropical fruit shakes and fried insects (crickets, silk worms, and even tarantulas for the adventurous). Small stages host traditional Apsara dance performances, modern music, and occasional fire‑twirling shows.
+                            </p>
+                            <p class="leading-relaxed">
+                                Beyond the main walking street, Phnom Penh offers several other lively lanes. <strong class="text-[#e69111]">Bassac Lane</strong> in the Tonle Bassac district is famous for its chic cocktail bars, craft beer pubs, and international restaurants. <strong class="text-[#e69111]">Langka Lane</strong> in BKK1 is a quieter alternative with Japanese eateries, wine bars, and laid‑back cafes. For a more local experience, the area around <strong class="text-[#e69111]">Orussey Market</strong> turns into a bustling night food market after dark, packed with BBQ stalls and noodle shops.
+                            </p>
+                            <div class="rounded-3xl overflow-hidden border-4 border-gray-100 shadow-md mt-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.7606879353652!2d104.93037500000001!3d11.569005999999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951000cb9de13%3A0x7912f9f42f30c2a6!2sWalk%20street%20-Riverside!5e0!3m2!1sen!2skh!4v1775641896454!5m2!1sen!2skh" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="dark:bg-white/5 p-8 transition hover:shadow-2xl rounded-[2rem] border border-white/5 bg-[#1b4332] m-auto h-fit w-full">
+                            <h2 class="text-xl font-bold text-white mb-6">Visitor Guide</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="text-emerald-500 font-bold text-sm uppercase mb-2">✓ Things You Can Do</h4>
+                                    <ul class="text-sm space-y-2 text-white/80">
+                                        <li>• Stroll the car‑free riverside on a Saturday or Sunday evening</li>
+                                        <li>• Shop for krama scarves, silverware, and local crafts</li>
+                                        <li>• Taste grilled street food, fruit shakes, and fried insects</li>
+                                        <li>• Watch traditional Apsara dance or live music performances</li>
+                                        <li>• Explore Bassac Lane (cocktail bars) or Langka Lane (bistros & pubs)</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-red-500 font-bold text-sm uppercase mb-2">✗ Things You Can't</h4>
+                                    <ul class="text-sm space-y-2 text-gray-400">
+                                        <li>• Litter – bins are available; keep the riverfront clean</li>
+                                        <li>• Drink alcohol from outside venues (support local businesses)</li>
+                                        <li>• Touch performers or interrupt street shows</li>
+                                        <li>• Leave valuables unattended – stay aware of your surroundings</li>
+                                    </ul>
+                                </div>
+                                <div class="pt-4 border-t border-white/20">
+                                    <p class="text-xs text-white/60"><span class="font-semibold">💡 Pro tip:</span> Arrive around 6:00–7:00 PM to catch the sunset over the Tonle Sap river before the street gets crowded. Wear comfortable walking shoes – the quay is long. Bargain politely at souvenir stalls (10–20% off is reasonable). For a quieter drink, walk 10 minutes to Bassac Lane or Langka Lane.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].classList.add("active");
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</html>

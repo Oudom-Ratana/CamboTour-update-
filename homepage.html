@@ -1,14 +1,615 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/output.css">
-    
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambodia - Kingdom of Wonder</title>
+    <link rel="stylesheet" href="./src/output.css" />
 
-    <h2 class="text-blue-700">hee</h2>
-</body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .hero-zoom {
+        animation: slowZoom 20s infinite alternate;
+      }
+
+      @keyframes slowZoom {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+      .header-transition {
+        transition:
+          background-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white overflow-x-hidden max-w-6xl m-auto dark:bg-[#0a120e]">
+    <header
+      id="mainHeader"
+      class="fixed top-0 left-0 right-0 z-50 pb-3 header-transition"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-1 md:flex md:items-center md:gap-12">
+            <a class="flex items-center" href="./homepage.html">
+              <img
+                class="w-15 h-15 mt-3 rounded-full dark:hidden"
+                src="./CamboTour_logo.png"
+                alt="CamboTour Light Logo"
+              />
+              <img
+                class="hidden w-15 h-15 mt-3 rounded-full dark:block dark:border-1 dark:border-[#D4AF37] shadow-amber-300"
+                src="./CamboTour_darklogo.png"
+                alt="CamboTour Dark Logo"
+              />
+            </a>
+          </div>
+
+          <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+              <ul class="flex items-center gap-6 text-sm">
+                <li>
+                  <a
+                    class="nav-link text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium"
+                    href="#"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium"
+                    href="destination.html"
+                    >Destination</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium"
+                    href="#"
+                    >Activities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium"
+                    href="#"
+                    >About & Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <div class="flex items-center gap-4">
+              <div class="sm:flex sm:gap-4">
+                <a
+                  id="loginBtn"
+                  class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500"
+                  href="#"
+                  >Login</a
+                >
+                <div class="hidden sm:flex">
+                  <a
+                    id="registerBtn"
+                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:text-white"
+                    href="#"
+                    >Register</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 rounded-md"
+              >
+                <button
+                  id="darkModeToggle"
+                  class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <svg
+                    class="fill-[#1b4332] block dark:hidden"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="fill-yellow-500 hidden dark:block"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="block md:hidden">
+                <button
+                  class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="relative h-screen min-h-[600px] m-auto overflow-hidden pt-20"
+    >
+      <div class="absolute inset-0 bg-blue-900">
+        <img
+          src="../image/4.jpg"
+          alt="Angkor Wat"
+          class="w-full h-full object-cover opacity-60 hero-zoom"
+        />
+      </div>
+
+      <div class="relative container mx-auto px-4 z-10">
+        <div class="max-w-2xl text-white">
+          <h1
+            class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4"
+          >
+            Discover the beauty<br />of
+            <span class="text-yellow-400">Cambodia</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 opacity-90">
+            From ancient temples to stunning beaches, your adventure starts
+            here.
+          </p>
+          <div>
+            <a
+              href="#"
+              class="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-10 py-4 rounded-full transition-all transform hover:scale-110 shadow-lg"
+            >
+              Start Your Journey
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="w-full lg:w-1/2 animate__animated animate__fadeInUp">
+            <h2
+              class="text-3xl md:text-5xl font-bold text-gray-800 mb-6 dark:text-[#D4AF37]"
+            >
+              Explore the KINGDOM of Wonder
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              "Where every stone breathes history and every smile tells a story.
+              Find your zen in the heart of the Kingdom."
+            </p>
+
+            <ul class="space-y-4 mb-8">
+              <li
+                class="flex items-center gap-3 transition-transform hover:translate-x-2"
+              >
+                <span
+                  class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-white shadow-sm"
+                ></span>
+                <span class="text-gray-700 font-medium">Iconic Landmarks</span>
+              </li>
+              <li
+                class="flex items-center gap-3 transition-transform hover:translate-x-2"
+              >
+                <span
+                  class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-white shadow-sm"
+                  >✓</span
+                >
+                <span class="text-gray-700 font-medium">Natural Wonders</span>
+              </li>
+              <li
+                class="flex items-center gap-3 transition-transform hover:translate-x-2"
+              >
+                <span
+                  class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm text-white font-bold"
+                >
+                  ✓
+                </span>
+                <span class="text-gray-700 font-medium">Local Cuisine</span>
+              </li>
+            </ul>
+
+            <a
+              href="#"
+              class="inline-block bg-gray-800 text-white px-8 py-3 rounded-full font-bold hover:bg-gray-700 transition shadow-md"
+            >
+              View Destinations
+            </a>
+          </div>
+
+          <div class="w-full lg:w-1/2 animate__animated animate__fadeInRight">
+            <div class="relative group">
+              <img
+                src="../image/explore.webp"
+                class="w-full h-auto rounded-3xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                alt="Cambodia"
+              />
+              <div
+                class="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-400/10 rounded-full -z-10 group-hover:scale-150 transition-transform duration-700"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h2
+          class="text-3xl md:text-5xl font-bold text-gray-800 mb-16 animate__animated animate__fadeIn dark:text-[#D4AF37]"
+        >
+          Most Popular Destinations
+        </h2>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
+        >
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/angkorwat.webp"
+                alt="AngkorWat"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Angkor Wat
+              </h2>
+              <p class="text-gray-600 text-sm">
+                World's largest religious monument.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/allphoto-bangkok-snsPfG7tIcA-unsplash.jpg"
+                alt="Phnom Penh"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Phnom Penh
+              </h2>
+              <p class="text-gray-600 text-sm">
+                Vibrant blend of history and city life.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/kohrong.JPG"
+                alt="Koh Rong"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Koh Rong
+              </h2>
+              <p class="text-gray-600 text-sm">
+                Pristine white sands and clear waters.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/busra.JPG"
+                alt="Mondulkiri"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Mondulkiri
+              </h2>
+              <p class="text-gray-600 text-sm">
+                A sanctuary for nature lovers.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="../image/tonlesab.JPG"
+                alt="Tonle Sap"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h2
+                class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors"
+              >
+                Tonle Sap
+              </h2>
+              <p class="text-gray-600 text-sm">
+                Famous floating and stilted villages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 dark:border dark:border-b-amber-400">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate__animated animate__fadeIn">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-gray-800 dark:text-[#D4AF37] mb-4"
+          >
+            Testimonials
+          </h2>
+          <div class="w-20 h-1 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate__animated animate__fadeInUp"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-14 h-14 bg-yellow-500 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg animate__animated animate__pulse animate__infinite"
+              >
+                S
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">Satya P.</h4>
+                <div class="flex text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed">
+              "Cambodia stole my heart. The temples, the people, the food —
+              absolutely magical! I can't wait to go back."
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-14 h-14 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg"
+              >
+                N
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">Nary M.</h4>
+                <div class="flex text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed">
+              "Best trip I've ever taken. Our guide knew every hidden gem in
+              Siem Reap, and the sunrise at Angkor Wat was life-changing."
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate__animated animate__fadeInUp animate__delay-2s"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-14 h-14 bg-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg"
+              >
+                O
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">Oudom R.</h4>
+                <div class="flex text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed">
+              "From the beaches in Koh Rong to the mountains in Mondulkiri,
+              every day was a new and wonderful adventure."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white dark:bg-[#0a120e]">
+      <div class="grid grid-cols-3 gap-10">
+        <div>
+          <img
+            src="./CamboTour_logo.png"
+            class="m-auto rounded-full w-35 h-35 dark:hidden"
+            alt="logo"
+          />
+          <img
+            src="./CamboTour_darklogo.png"
+            class="hidden dark:block m-auto rounded-full w-35 h-35"
+            alt="logodark"
+          />
+          <p
+            class="mt-8 text-center m-auto max-w-xs text-gray-500 dark:text-white gray-400"
+          >
+            Exploring every province in Cambodia, one story at a time.
+          </p>
+        </div>
+        <div>
+          <p class="font-medium text-gray-900 dark:text-white white">
+            Sponsored by
+          </p>
+          <img
+            src="./New Logo iSTAD Full-12 (2).png"
+            class="h-20 mt-3"
+            alt=""
+          />
+        </div>
+        <div>
+          <p class="font-medium text-gray-900 dark:text-white white">Company</p>
+
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 transition hover:opacity-75 dark:text-white gray-200"
+              >
+                About
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 transition hover:opacity-75 dark:text-white gray-200"
+              >
+                Meet the Team
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 text-center my-10 dark:text-white">
+        © 2026. CamboTour. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const header = document.getElementById("mainHeader");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const loginBtn = document.getElementById("loginBtn");
+      const registerBtn = document.getElementById("registerBtn");
+      const darkToggle = document.getElementById("darkModeToggle");
+
+      function updateHeaderOnScroll() {
+        if (window.scrollY > 50) {
+          header.classList.add("bg-white", "dark:bg-gray-900", "shadow-md");
+          header.classList.remove("bg-transparent");
+
+          navLinks.forEach((link) => {
+            link.classList.remove("text-white");
+            link.classList.add("text-gray-500", "dark:text-white");
+          });
+          if (loginBtn) {
+            loginBtn.classList.remove(
+              "text-white",
+              "border-white",
+              "bg-transparent",
+            );
+            loginBtn.classList.add(
+              "bg-[#1b4332]",
+              "dark:bg-[#D4AF37]",
+              "text-white",
+            );
+          }
+          if (registerBtn) {
+            registerBtn.classList.remove(
+              "text-white",
+              "border-white",
+              "bg-transparent",
+            );
+            registerBtn.classList.add(
+              "bg-gray-100",
+              "text-teal-600",
+              "dark:bg-gray-800",
+              "dark:text-white",
+            );
+          }
+        } else {
+          header.classList.remove("bg-white", "dark:bg-gray-900", "shadow-md");
+          header.classList.add("bg-transparent");
+          navLinks.forEach((link) => {
+            link.classList.remove("text-gray-500", "dark:text-white");
+            link.classList.add("text-white");
+          });
+          if (loginBtn) {
+            loginBtn.classList.remove(
+              "bg-[#1b4332]",
+              "dark:bg-[#D4AF37]",
+              "text-white",
+            );
+            loginBtn.classList.add(
+              "text-white",
+              "border",
+              "border-white",
+              "bg-transparent",
+            );
+          }
+          if (registerBtn) {
+            registerBtn.classList.remove(
+              "bg-gray-100",
+              "text-teal-600",
+              "dark:bg-gray-800",
+              "dark:text-white",
+            );
+            registerBtn.classList.add(
+              "text-white",
+              "border",
+              "border-white",
+              "bg-transparent",
+            );
+          }
+        }
+      }
+
+      updateHeaderOnScroll();
+      window.addEventListener("scroll", updateHeaderOnScroll);
+
+      if (darkToggle) {
+        darkToggle.addEventListener("click", () => {
+          document.body.classList.toggle("dark");
+          updateHeaderOnScroll();
+        });
+      }
+    </script>
+  </body>
 </html>
