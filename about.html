@@ -3,125 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CamboTour - About & Contact</title>
+    <title>CamboTour - About & Contact | Dark Mode Persistence</title>
     <link rel="stylesheet" href="../src/output.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
     </style>
 </head>
-<body class="dark:bg-[#0a120e] ">
-<header class="bg-white dark:bg-[#0a120e] mb-4 py-5">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16 items-center justify-between relative">
-      <div class="flex-1 md:flex md:items-center md:gap-12">
-        <a class="flex items-center" href="#">
-          <img class="w-15 h-15 mt-3 rounded-full dark:hidden" src="../../CamboTour_logo.png" alt="CamboTour Light Logo">
-          <img class="hidden w-15 h-15 mt-3 rounded-full dark:block dark:border-1 dark:border-[#D4AF37] shadow-amber-300" src="../../CamboTour_darklogo.png" alt="CamboTour Dark Logo">
-        </a>
-      </div>
-      <div class="md:flex md:items-center md:gap-12">
-        <nav id="mobileNav" class="hidden md:block absolute md:relative top-full left-0 w-full bg-white dark:bg-[#0a120e] md:w-auto md:bg-transparent shadow-md md:shadow-none z-50 mt-2 md:mt-0">
-          <ul class="flex flex-col md:flex-row items-center gap-6 text-sm p-4 md:p-0">
-            <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium" href="./homepage.html">Home</a></li>
-            <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium" href="./destination.html">Destination</a></li>
-            <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium" href="./activities.html">Activities</a></li>
-            <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium" href="./about.html">About & Contact</a></li>
-          </ul>
-        </nav>
+<body class="dark:bg-[#0a120e] bg-white">
+    <header class="bg-white dark:bg-[#0a120e] mb-4 py-5 border-b border-gray-100 dark:border-gray-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between relative">
+                <div class="flex-1 md:flex md:items-center md:gap-12">
+                    <a class="flex items-center" href="./homepage.html">
+                        <img class="w-15 h-15 mt-3 rounded-full dark:hidden" src="../../CamboTour_logo.png" alt="CamboTour Light Logo">
+                        <img class="hidden w-15 h-15 mt-3 rounded-full dark:block dark:border-1 dark:border-[#D4AF37] shadow-amber-300" src="../../CamboTour_darklogo.png" alt="CamboTour Dark Logo">
+                    </a>
+                </div>
+                <div class="md:flex md:items-center md:gap-12">
+                    <nav id="mobileNav" class="hidden md:block absolute md:relative top-full left-0 w-full bg-white dark:bg-[#0a120e] md:w-auto md:bg-transparent shadow-md md:shadow-none z-50 mt-2 md:mt-0">
+                        <ul class="flex flex-col md:flex-row items-center gap-6 text-sm p-4 md:p-0">
+                            <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium" href="./homepage.html">Home</a></li>
+                            <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium" href="./destination.html">Destination</a></li>
+                            <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium" href="./activities.html">Activities</a></li>
+                            <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white font-medium" href="./about.html">About & Contact</a></li>
+                        </ul>
+                    </nav>
 
-        <div class="flex items-center gap-4">
-          <div class="sm:flex sm:gap-4">
-            <a class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500" href="./login.html#loginTab">Login</a>
-            <div class="hidden sm:flex">
-              <a class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5 dark:text-white" href="./login.html#registerTab">Register</a>
+                    <div class="flex items-center gap-4">
+                        <div class="sm:flex sm:gap-4">
+                            <a class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500 transition" href="./login.html#loginTab">Login</a>
+                            <div class="hidden sm:flex">
+                                <a class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5 dark:text-white" href="./login.html#registerTab">Register</a>
+                            </div>
+                        </div>
+
+                        <div class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5 rounded-md">
+                            <button id="darkModeToggle" class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition" aria-label="Toggle dark mode">
+                                <svg class="fill-[#1b4332] block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                                </svg>
+                                <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="block md:hidden">
+                            <button id="hamburgerBtn" class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:border-0.5 dark:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5 rounded-md">
-            <button onclick="document.body.classList.toggle('dark')" class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
-              <svg class="fill-[#1b4332] block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-              </svg>
-              <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-              </svg>
-            </button>
-          </div>
-
-          <div class="block md:hidden">
-            <button id="hamburgerBtn" class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:border-0.5 dark:text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<script>
-  (function() {
-    var hamburger = document.getElementById('hamburgerBtn');
-    var mobileNav = document.getElementById('mobileNav');
-    if (hamburger && mobileNav) {
-      hamburger.addEventListener('click', function(e) {
-        e.stopPropagation();
-        mobileNav.classList.toggle('hidden');
-      });
-      window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) {
-          mobileNav.classList.remove('hidden');
-        } else {
-          mobileNav.classList.add('hidden');
-        }
-      });
-      document.addEventListener('click', function(e) {
-        if (window.innerWidth < 768 && !mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
-          mobileNav.classList.add('hidden');
-        }
-      });
-    }
-  })();
-</script>
+    </header>
 
     <section class="py-20 px-4 md:px-12 lg:px-24">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 px-4 ">
                 <h2 class="text-4xl md:text-5xl dark:text-[#D4AF37] font-bold text-black mb-6">About Us</h2>
-                <p class="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">Promoting sustainable tourism in the Kingdom of Wonder. We believe that responsible travel can preserve Cambodia's rich heritage while empowering local communities and protecting its stunning natural landscapes for generations to come.</p>
-                <div class="w-[1000px] p-12 mb-12 mx-auto">
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed">Promoting sustainable tourism in the Kingdom of Wonder. We believe that responsible travel can preserve Cambodia's rich heritage while empowering local communities and protecting its stunning natural landscapes for generations to come.</p>
+                <div class="w-full md:w-[1000px] p-4 md:p-12 mb-12 mx-auto">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <h3 class="text-2xl font-semibold text-yellow-500 mb-6">Who We Are</h3>
-                            <div class="space-y-4 text-gray-400 leading-relaxed">
-                                <p class="text-lg">we are your digital gateway to Cambodia’s most iconic and remote destinations. We specialize in transforming your travel dreams into seamless, successful adventures through expert planning and deep local knowledge. Our goal is to provide measurable value to your vacation—ensuring you see the best sites at the best times. Whether it’s navigating the bustling streets of Phnom Penh or finding peace in the Cardamom Mountains, we tailor the experience to your specific pace and needs.</p>
+                            <div class="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <p class="text-lg">We are your digital gateway to Cambodia’s most iconic and remote destinations. We specialize in transforming your travel dreams into seamless, successful adventures through expert planning and deep local knowledge. Our goal is to provide measurable value to your vacation—ensuring you see the best sites at the best times. Whether it’s navigating the bustling streets of Phnom Penh or finding peace in the Cardamom Mountains, we tailor the experience to your specific pace and needs.</p>
                                 <p class="text-lg">We believe in creating solutions that not only look beautiful but also deliver measurable results. Our client-focused approach ensures that every project is tailored to meet specific business objectives and user needs.</p>
                             </div>
                             <div class="grid grid-cols-2 gap-6 mt-8">
                                 <div class="text-center">
                                     <div class="text-3xl font-bold text-black dark:text-[#D4AF37] mb-2">150+</div>
-                                    <div class="text-gray-500">Projects Completed</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Projects Completed</div>
                                 </div>
                                 <div class="text-center">
                                     <div class="text-3xl font-bold dark:text-[#D4AF37] text-black mb-2">50+</div>
-                                    <div class="text-gray-500">Happy Clients</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Happy Clients</div>
                                 </div>
                                 <div class="text-center">
                                     <div class="text-3xl font-bold dark:text-[#D4AF37] text-black mb-2">8+</div>
-                                    <div class="text-gray-500">Years Experience</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Years Experience</div>
                                 </div>
                                 <div class="text-center">
                                     <div class="text-3xl font-bold dark:text-[#D4AF37] text-black mb-2">5+</div>
-                                    <div class="text-gray-500">Team Members</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Team Members</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gray-900 h-96  w-[500px] flex items-center justify-center">
-                            <img class="rounded-3xl ring" src="./cambodia-skyline-travel-vector-24461536.jpg" alt="">
+                        <div class="bg-gray-100 dark:bg-gray-800 h-96 w-full max-w-[500px] mx-auto flex items-center justify-center rounded-3xl overflow-hidden shadow-lg">
+                            <img class="rounded-3xl object-cover w-full h-full" src="./cambodia-skyline-travel-vector-24461536.jpg" alt="Cambodia skyline illustration">
                         </div>
                     </div>
                 </div>
@@ -129,7 +105,7 @@
         </div>
     </section>
     
-    <div class="dark:bg-[#0a120e] px-6 py-12 sm:py-24 lg:px-8 ">
+        <div class="dark:bg-[#0a120e] px-6 py-12 sm:py-24 lg:px-8 ">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-[#e4ddc8]">Our Team members</h2>
         <p class="mt-3 text-lg text-gray-600">We're a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients..</p>
@@ -202,49 +178,142 @@
             </div>
       
     </div>
+    </div>
 
-    <div class="dark:bg-[#0a120e] px-6 py-12 sm:py-24 lg:px-8">
+    <div class="dark:bg-[#0a120e] bg-white px-6 py-12 sm:py-24 lg:px-8">
         <div class="mx-auto max-w-xl flex flex-col items-center justify-center text-center">
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-[#D4AF37]">Contact Us</h1>
-            <p class="mt-3 text-lg text-gray-600">Your journey to Cambodia starts with a single conversation. Reach out to our local travel experts for advice, bookings, or hidden gem recommendations.</p>
+            <p class="mt-3 text-lg text-gray-600 dark:text-gray-400">Your journey to Cambodia starts with a single conversation. Reach out to our local travel experts for advice, bookings, or hidden gem recommendations.</p>
         </div>
-        <form class="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form id="contactForm" class="mx-auto mt-16 max-w-xl sm:mt-20">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                     <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900 dark:text-[#D4AF37]">First name</label>
                     <div class="mt-2.5">
-                        <input required type="text" name="first-name" id="first-name" autocomplete="given-name" placeholder="Your First Name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+                        <input required type="text" name="first-name" id="first-name" autocomplete="given-name" placeholder="Your First Name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6 dark:bg-gray-800 dark:text-white dark:ring-gray-600">
                     </div>
                 </div>
                 <div>
                     <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900 dark:text-[#D4AF37]">Last name</label>
                     <div class="mt-2.5">
-                        <input required type="text" name="last-name" id="last-name" autocomplete="family-name" placeholder="Your Last Name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+                        <input required type="text" name="last-name" id="last-name" autocomplete="family-name" placeholder="Your Last Name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6 dark:bg-gray-800 dark:text-white dark:ring-gray-600">
                     </div>
                 </div>
                 <div class="sm:col-span-2">
                     <label for="email" class="block text-sm font-semibold leading-6 text-gray-900 dark:text-[#D4AF37]">Email</label>
                     <div class="mt-2.5">
-                        <input required type="email" name="email" id="email" autocomplete="email" placeholder="Your Email Address" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+                        <input required type="email" name="email" id="email" autocomplete="email" placeholder="Your Email Address" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6 dark:bg-gray-800 dark:text-white dark:ring-gray-600">
                     </div>
                 </div>
                 <div class="sm:col-span-2">
                     <label for="phone" class="block text-sm font-semibold leading-6 text-gray-900 dark:text-[#D4AF37]">Phone number</label>
                     <div class="mt-2.5">
-                        <input required type="tel" name="phone" id="phone" autocomplete="tel" placeholder="Your Phone Number" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+                        <input required type="tel" name="phone" id="phone" autocomplete="tel" placeholder="Your Phone Number" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6 dark:bg-gray-800 dark:text-white dark:ring-gray-600">
                     </div>
                 </div>
                 <div class="sm:col-span-2">
                     <label for="message" class="block text-sm font-semibold leading-6 text-gray-900 dark:text-[#D4AF37]">Message</label>
                     <div class="mt-2.5">
-                        <textarea name="message" id="message" rows="4" placeholder="Share your thoughts..." class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"></textarea>
+                        <textarea name="message" id="message" rows="4" placeholder="Share your thoughts..." class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6 dark:bg-gray-800 dark:text-white dark:ring-gray-600"></textarea>
                     </div>
                 </div>
             </div>
             <div class="mt-10">
-                <button type="submit" class="bg-yellow-500 text-white rounded-sm py-2 w-full block">Submit →</button>
+                <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 transition text-white rounded-md py-2.5 w-full block font-medium shadow-md">Submit →</button>
             </div>
         </form>
     </div>
+
+    <script>
+        (function() {
+            const THEME_KEY = 'cambotour-theme';
+            const body = document.body;
+            
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    body.classList.add('dark');
+                } else {
+                    body.classList.remove('dark');
+                }
+                localStorage.setItem(THEME_KEY, theme);
+            }
+            
+            function loadTheme() {
+                const savedTheme = localStorage.getItem(THEME_KEY);
+                if (savedTheme === 'dark') {
+                    applyTheme('dark');
+                } else if (savedTheme === 'light') {
+                    applyTheme('light');
+                } else {
+                    applyTheme('light');
+                }
+            }
+            
+            function toggleTheme() {
+                const isDark = body.classList.contains('dark');
+                if (isDark) {
+                    applyTheme('light');
+                } else {
+                    applyTheme('dark');
+                }
+            }
+            
+            const toggleBtn = document.getElementById('darkModeToggle');
+            if (toggleBtn) {
+                const newBtn = toggleBtn.cloneNode(true);
+                toggleBtn.parentNode.replaceChild(newBtn, toggleBtn);
+                newBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    toggleTheme();
+                });
+            }
+            
+            loadTheme();
+            
+            const hamburger = document.getElementById('hamburgerBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            if (hamburger && mobileNav) {
+                function handleResize() {
+                    if (window.innerWidth >= 768) {
+                        mobileNav.classList.remove('hidden');
+                    } else {
+                        mobileNav.classList.add('hidden');
+                    }
+                }
+                hamburger.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mobileNav.classList.toggle('hidden');
+                });
+                window.addEventListener('resize', handleResize);
+                document.addEventListener('click', function(e) {
+                    if (window.innerWidth < 768 && mobileNav && !mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+                        mobileNav.classList.add('hidden');
+                    }
+                });
+                handleResize();
+            }
+            
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const firstName = document.getElementById('first-name')?.value.trim() || '';
+                    const lastName = document.getElementById('last-name')?.value.trim() || '';
+                    const email = document.getElementById('email')?.value.trim() || '';
+                    const phone = document.getElementById('phone')?.value.trim() || '';
+                    if (!firstName || !lastName || !email || !phone) {
+                        alert('Please fill in all required fields (First name, Last name, Email, Phone).');
+                        return;
+                    }
+                    if (!email.includes('@') || !email.includes('.')) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+                    alert(`Thank you ${firstName} ${lastName}! Our Cambodia team will reach out within 24 hours.`);
+                    contactForm.reset();
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
