@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Stung Treng - CamboTour</title>
     <link rel="stylesheet" href="../src/output.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Boldonse&family=Pacifico&display=swap"
@@ -32,14 +32,14 @@
 
         <div class="flex items-center gap-4">
           <div class="sm:flex sm:gap-4">
-            <a class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500" href="./login.html#loginTab">Login</a>
+            <a class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500" href="../login.html#loginTab">Login</a>
             <div class="hidden sm:flex">
-              <a class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5 dark:text-white" href="./login.html#registerTab">Register</a>
+              <a class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5 dark:text-white" href="../login.html#registerTab">Register</a>
             </div>
           </div>
 
           <div class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5 rounded-md">
-            <button onclick="document.body.classList.toggle('dark')" class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button id="darkModeToggleBtn" class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
               <svg class="fill-[#1b4332] block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
               </svg>
@@ -86,6 +86,50 @@
     }
   })();
 </script>
+
+<script>
+  (function() {
+    const THEME_KEY = 'cambotour-theme';
+    const body = document.body;
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.add('dark');
+      } else {
+        body.classList.remove('dark');
+      }
+      localStorage.setItem(THEME_KEY, theme);
+    }
+    function loadTheme() {
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      if (savedTheme === 'dark') {
+        applyTheme('dark');
+      } else if (savedTheme === 'light') {
+        applyTheme('light');
+      } else {
+        applyTheme('light');
+      }
+    }
+    function toggleTheme() {
+      const isDark = body.classList.contains('dark');
+      if (isDark) {
+        applyTheme('light');
+      } else {
+        applyTheme('dark');
+      }
+    }
+    const toggleBtn = document.getElementById('darkModeToggleBtn');
+    if (toggleBtn) {
+      const newBtn = toggleBtn.cloneNode(true);
+      toggleBtn.parentNode.replaceChild(newBtn, toggleBtn);
+      newBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleTheme();
+      });
+    }
+    loadTheme();
+  })();
+</script>
+
     <h1
       class="text-center mt-5 font-['Pacifico',cursive] dark:text-white text-[#e69111]"
     >
@@ -118,7 +162,7 @@
         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Preah Rumkel & Sopheakmit Waterfall</h3>
         
         <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
-        A remote jungle village on the Mekong, renowned as one of the most beautiful places in Cambodia to watch rare Irrawaddy dolphins[reference:4]. The area serves as the gateway to the breathtaking Sopheakmit Waterfalls near the Lao border. Journey by speedboat through serene jungle scenery, spot abundant birdlife, and stay overnight in community homestays for an authentic eco-adventure far from the bustle of city life[reference:5][reference:6].
+        A remote jungle village on the Mekong, renowned as one of the most beautiful places in Cambodia to watch rare Irrawaddy dolphins. The area serves as the gateway to the breathtaking Sopheakmit Waterfalls near the Lao border. Journey by speedboat through serene jungle scenery, spot abundant birdlife, and stay overnight in community homestays for an authentic eco-adventure far from the bustle of city life.
         </p>
 
         <div class="flex items-center justify-between">
@@ -152,7 +196,7 @@
         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Stung Treng Ramsar Site</h3>
         
         <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
-        A wetland of international importance, stretching 37 km along the Mekong and covering 14,600 hectares[reference:7]. This flooded forest area is home to 231 bird species, 207 fish species, and the critically endangered Irrawaddy dolphin[reference:8]. Kayak through unique tree roots, explore remote islands, and go birdwatching for species like the Grey-headed Fish Eagle and White-shouldered Ibis[reference:9][reference:10][reference:11].
+        A wetland of international importance, stretching 37 km along the Mekong and covering 14,600 hectares. This flooded forest area is home to 231 bird species, 207 fish species, and the critically endangered Irrawaddy dolphin. Kayak through unique tree roots, explore remote islands, and go birdwatching for species like the Grey-headed Fish Eagle and White-shouldered Ibis.
         </p>
 
         <div class="flex items-center justify-between">

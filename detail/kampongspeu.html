@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Kampong Speu - CamboTour</title>
     <link rel="stylesheet" href="../src/output.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Boldonse&family=Pacifico&display=swap"
@@ -32,14 +32,14 @@
 
         <div class="flex items-center gap-4">
           <div class="sm:flex sm:gap-4">
-            <a class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500" href="./login.html#loginTab">Login</a>
+            <a class="rounded-md bg-[#1b4332] dark:bg-[#D4AF37] px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500" href="../login.html#loginTab">Login</a>
             <div class="hidden sm:flex">
-              <a class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5 dark:text-white" href="./login.html#registerTab">Register</a>
+              <a class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:border-0.5 dark:text-white" href="../login.html#registerTab">Register</a>
             </div>
           </div>
 
           <div class="h-10 w-10 flex justify-center items-center dark:bg-gray-800 dark:border-0.5 rounded-md">
-            <button onclick="document.body.classList.toggle('dark')" class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button id="darkModeToggleBtn" class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
               <svg class="fill-[#1b4332] block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
               </svg>
@@ -86,6 +86,50 @@
     }
   })();
 </script>
+
+<script>
+  (function() {
+    const THEME_KEY = 'cambotour-theme';
+    const body = document.body;
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.add('dark');
+      } else {
+        body.classList.remove('dark');
+      }
+      localStorage.setItem(THEME_KEY, theme);
+    }
+    function loadTheme() {
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      if (savedTheme === 'dark') {
+        applyTheme('dark');
+      } else if (savedTheme === 'light') {
+        applyTheme('light');
+      } else {
+        applyTheme('light');
+      }
+    }
+    function toggleTheme() {
+      const isDark = body.classList.contains('dark');
+      if (isDark) {
+        applyTheme('light');
+      } else {
+        applyTheme('dark');
+      }
+    }
+    const toggleBtn = document.getElementById('darkModeToggleBtn');
+    if (toggleBtn) {
+      const newBtn = toggleBtn.cloneNode(true);
+      toggleBtn.parentNode.replaceChild(newBtn, toggleBtn);
+      newBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleTheme();
+      });
+    }
+    loadTheme();
+  })();
+</script>
+
     <h1
       class="text-center mt-5 font-['Pacifico',cursive] dark:text-white text-[#e69111]"
     >
@@ -101,72 +145,59 @@
       class="flex justify-center flex-wrap max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 gap-10"
     >
       <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
-    <div class="relative h-72">
-        <img src="https://www.cambotours.com/userfiles/thumbs/phnom-aural-wildlife-sanctuary.jpg" 
-            class="w-full h-full object-cover" alt="Phnom Aural Kampong Speu">
-        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
-        📍 Kampong Speu
+        <div class="relative h-72">
+          <img
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/5f/79/65/kirirom-national-park.jpg?w=1200&h=-1&s=1"
+            class="w-full h-full object-cover"
+            alt="Kirirom National Park Kampong Speu"
+          />
+          <div
+            class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md"
+          >
+            📍 Kampong Speu
+          </div>
         </div>
-    </div>
 
-    <div class="p-8">
-        <div class="flex items-center gap-2 mb-2">
-        <span class="text-yellow-500 text-lg">★★★★★</span>
-        <span class="text-gray-400 text-xs">(1,230+ Reviews)</span>
-        </div>
-        
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Phnom Aural</h3>
-        
-        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
-        Summit Cambodia's highest peak at 1,813 meters! A challenging multi‑day trek through dense jungle, home to elephants, bears, and rare birds. The sunrise view from the top is legendary. Best attempted with a local guide from the Aural community.
-        </p>
+        <div class="p-8">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-yellow-500 text-lg">★★★★½</span>
+            <span class="text-gray-400 text-xs">(2,150+ Reviews)</span>
+          </div>
 
-        <div class="flex items-center justify-between">
-        <div class="flex -space-x-2">
-            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
-            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
-            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+27</div>
-        </div>
-        <a href="../place/kampongspeu/phnomaural.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
-            Explore <span class="ml-1">→</span>
-        </a>
-        </div>
-    </div>
-</div>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+            Kirirom National Park
+          </h3>
 
-    <div class="group max-w-xs bg-white dark:bg-[#1e2229] rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-2xl dark:shadow-gray-800 dark:hover:shadow-white/10 transition-all duration-500 hover:border-[#e69111]/30 border border-transparent">
-    <div class="relative h-72">
-        <img src="https://asianews.network/wp-content/uploads/2022/06/p1.jpeg" 
-            class="w-full h-full object-cover" alt="Kampong Speu Palm Sugar">
-        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md">
-        📍 Kampong Speu
-        </div>
-    </div>
+          <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+            Cambodia's first national park, known for its pine forest, cool
+            mountain air, and stunning waterfalls. Hike the trails, visit the
+            royal hill station ruins, and enjoy a picnic by the lake – a
+            refreshing escape from the heat.
+          </p>
 
-    <div class="p-8">
-        <div class="flex items-center gap-2 mb-2">
-        <span class="text-yellow-500 text-lg">★★★★☆</span>
-        <span class="text-gray-400 text-xs">(1,480+ Reviews)</span>
+          <div class="flex items-center justify-between">
+            <div class="flex -space-x-2">
+              <div
+                class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"
+              ></div>
+              <div
+                class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"
+              ></div>
+              <div
+                class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold"
+              >
+                +32
+              </div>
+            </div>
+            <a
+              href="../place/kampongspeu/kirirom.html"
+              class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all"
+            >
+              Explore <span class="ml-1">→</span>
+            </a>
+          </div>
         </div>
-        
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Kampong Speu Palm Sugar Villages</h3>
-        
-        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
-        Discover Cambodia's famous palm sugar (Skor Thnot). Visit family‑run farms where skilled harvesters climb sugar palms and boil the sap into golden cakes. Taste the rich, caramel‑like sugar and buy authentic, chemical‑free souvenirs.
-        </p>
-
-        <div class="flex items-center justify-between">
-        <div class="flex -space-x-2">
-            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-300"></div>
-            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-gray-400"></div>
-            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e2229] bg-[#e69111] flex items-center justify-center text-[10px] text-white font-bold">+23</div>
-        </div>
-        <a href="../place/kampongspeu/palmvillage.html" class="text-[#e69111] font-bold flex items-center hover:gap-2 transition-all">
-            Explore <span class="ml-1">→</span>
-        </a>
-        </div>
-    </div>
-</div>
+      </div>
     </div>
   </body>
 </html>
